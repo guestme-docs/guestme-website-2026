@@ -30,6 +30,8 @@ import { MegaMenu } from '@/components/landing/mega-menu'
 import { ModeToggle } from '@/components/mode-toggle'
 import { useTheme } from '@/hooks/use-theme'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const navigationItems = [
   { name: 'Home', href: '#hero' },
   { name: 'Features', href: '#features' },
@@ -84,14 +86,14 @@ export function LandingNavbar() {
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
             <Image
-              src="/gm-logo-black.svg"
+              src={`${basePath}/gm-logo-black.svg`}
               alt="GuestMe"
               width={139}
               height={20}
               className="dark:hidden"
             />
             <Image
-              src="/gm-logo-white.svg"
+              src={`${basePath}/gm-logo-white.svg`}
               alt="GuestMe"
               width={139}
               height={20}
@@ -159,14 +161,14 @@ export function LandingNavbar() {
               <SheetHeader className="space-y-0 p-4 pb-2 border-b">
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/gm-logo-black.svg"
+                    src={`${basePath}/gm-logo-black.svg`}
                     alt="GuestMe"
                     width={100}
                     height={14}
                     className="dark:hidden"
                   />
                   <Image
-                    src="/gm-logo-white.svg"
+                    src={`${basePath}/gm-logo-white.svg`}
                     alt="GuestMe"
                     width={100}
                     height={14}

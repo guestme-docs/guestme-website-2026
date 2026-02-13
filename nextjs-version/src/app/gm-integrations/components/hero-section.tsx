@@ -2,27 +2,29 @@ import { ArrowRightIcon, LayoutGridIcon, PlusIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const partnerLogos = [
   // Row 1
-  { name: 'iiko', src: '/images/integrations/iiko_main.svg' },
-  { name: 'ВТБ Family', src: '/images/integrations/vtbfamily_main.svg' },
-  { name: 'Афиша Рестораны', src: '/images/integrations/afisha_main.svg' },
+  { name: 'iiko', src: `${basePath}/images/integrations/iiko_main.svg` },
+  { name: 'ВТБ Family', src: `${basePath}/images/integrations/vtbfamily_main.svg` },
+  { name: 'Афиша Рестораны', src: `${basePath}/images/integrations/afisha_main.svg` },
   { name: null }, // placeholder
-  { name: 'Restoclub', src: '/images/integrations/restoclub_main.svg' },
-  { name: 'Premium Bonus', src: '/images/integrations/premiumbonus_main.svg' },
-  { name: 'Prime Hill', src: '/images/integrations/primehill_main.svg' },
+  { name: 'Restoclub', src: `${basePath}/images/integrations/restoclub_main.svg` },
+  { name: 'Premium Bonus', src: `${basePath}/images/integrations/premiumbonus_main.svg` },
+  { name: 'Prime Hill', src: `${basePath}/images/integrations/primehill_main.svg` },
   { name: null },
   { name: null },
   { name: null },
   // Row 2
-  { name: 'DocsInBox', src: '/images/integrations/docsinbox_main.svg' },
-  { name: 'АМД', src: '/images/integrations/ama_main.svg' },
+  { name: 'DocsInBox', src: `${basePath}/images/integrations/docsinbox_main.svg` },
+  { name: 'АМД', src: `${basePath}/images/integrations/ama_main.svg` },
   { name: null },
-  { name: 'SMS Aero', src: '/images/integrations/smsaero_main.svg' },
-  { name: 'СМС Центр', src: '/images/integrations/smsc_main.svg' },
-  { name: 'Prostor SMS', src: '/images/integrations/prostorsms_main.svg' },
+  { name: 'SMS Aero', src: `${basePath}/images/integrations/smsaero_main.svg` },
+  { name: 'СМС Центр', src: `${basePath}/images/integrations/smsc_main.svg` },
+  { name: 'Prostor SMS', src: `${basePath}/images/integrations/prostorsms_main.svg` },
   { name: null },
-  { name: 'ChatPush', src: '/images/integrations/chatpush_main.svg' },
+  { name: 'ChatPush', src: `${basePath}/images/integrations/chatpush_main.svg` },
   { name: null },
   { name: null },
 ] as const

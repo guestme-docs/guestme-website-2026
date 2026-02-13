@@ -4,6 +4,8 @@ import { BadgeAccordion } from './badge-accordion'
 import { accordionDataV1_1_0 } from '../data/changelog-data'
 import { Button } from '@/components/ui/button'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export function V1_1_0() {
   return (
     <div>
@@ -16,7 +18,7 @@ export function V1_1_0() {
               semantic, and fully type-safe — built for scaling design systems.
             </p>
           </div>
-          <img src='/images/changelog/image-2.webp' alt='Design Tokens 2.0 Demo' />
+          <img src={`${basePath}/images/changelog/image-2.webp`} alt='Design Tokens 2.0 Demo' />
           <p className='text-muted-foreground'>
             Design Tokens 2.0 introduces a complete overhaul of how themes are managed within shadcnstudio. With this
             update, design tokens are now hierarchical and semantic, offering greater flexibility and scalability for

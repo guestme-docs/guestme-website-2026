@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { Separator } from '@/components/ui/separator'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const footerLinks = {
   product: [
     { name: 'Стоимость', href: '/#prices' },
@@ -34,14 +36,14 @@ export function LandingFooter() {
             {/* Logo */}
             <a href="/" aria-label="На главную">
               <Image
-                src="/gm-logo-black.svg"
+                src={`${basePath}/gm-logo-black.svg`}
                 alt="GuestMe"
                 width={139}
                 height={20}
                 className="dark:hidden"
               />
               <Image
-                src="/gm-logo-white.svg"
+                src={`${basePath}/gm-logo-white.svg`}
                 alt="GuestMe"
                 width={139}
                 height={20}

@@ -5,38 +5,40 @@ import Image from 'next/image'
 import { ChartPie, BotMessageSquare, Layers, ChartSpline, ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const benefits = [
   {
     icon: ChartPie,
     title: 'Unified Sales Overview',
     description:
       'Monitor leads, purchases, and orders in real-time to stay updated on every key business metric. This ensures you have the latest insights to make informed decisions.',
-    lightImage: '/images/benefits/image-01.webp',
-    darkImage: '/images/benefits/image-01-dark.webp',
+    lightImage: `${basePath}/images/benefits/image-01.webp`,
+    darkImage: `${basePath}/images/benefits/image-01-dark.webp`,
   },
   {
     icon: BotMessageSquare,
     title: 'Automated Follow-Ups',
     description:
       'Let smart reminders handle repetitive tasks, allowing you to concentrate on closing more deals rather than managing them. This way, you can maximise your productivity and achieve better results.',
-    lightImage: '/images/benefits/image-02.webp',
-    darkImage: '/images/benefits/image-02-dark.webp',
+    lightImage: `${basePath}/images/benefits/image-02.webp`,
+    darkImage: `${basePath}/images/benefits/image-02-dark.webp`,
   },
   {
     icon: Layers,
     title: 'Clean & Simple Workflow',
     description:
       'Move deals effortlessly through stages with our intuitive pipeline system designed for clarity and control. This system ensures that you always have a clear view of your progress.',
-    lightImage: '/images/benefits/image-03.webp',
-    darkImage: '/images/benefits/image-03-dark.webp',
+    lightImage: `${basePath}/images/benefits/image-03.webp`,
+    darkImage: `${basePath}/images/benefits/image-03-dark.webp`,
   },
   {
     icon: ChartSpline,
     title: 'Instant Performance Insights',
     description:
       'Get accurate reports and analytics that help you understand growth patterns and make confident decisions. These insights empower you to strategies effectively for future success.',
-    lightImage: '/images/benefits/image-04.webp',
-    darkImage: '/images/benefits/image-04-dark.webp',
+    lightImage: `${basePath}/images/benefits/image-04.webp`,
+    darkImage: `${basePath}/images/benefits/image-04-dark.webp`,
   },
 ]
 

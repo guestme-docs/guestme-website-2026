@@ -5,6 +5,8 @@ import { Badge } from '@/components/ui/badge'
 import { GridPattern } from '@/components/grid-pattern'
 import { BorderBeam } from '@/components/border-beam'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export function HeroSection() {
 
   return (
@@ -60,7 +62,7 @@ export function HeroSection() {
             <div className="flex h-full w-full overflow-hidden rounded-lg border">
               {/* Light mode dashboard image */}
               <Image
-                src="/dashboard-light.png"
+                src={`${basePath}/dashboard-light.png`}
                 alt="GuestMe Dashboard"
                 width={1200}
                 height={800}
@@ -69,7 +71,7 @@ export function HeroSection() {
               />
               {/* Dark mode dashboard image */}
               <Image
-                src="/dashboard-dark.png"
+                src={`${basePath}/dashboard-dark.png`}
                 alt="GuestMe Dashboard"
                 width={1200}
                 height={800}

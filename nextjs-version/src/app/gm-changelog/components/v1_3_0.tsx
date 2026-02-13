@@ -2,6 +2,8 @@ import { TimelineItem } from './timeline-item'
 import { BadgeAccordion } from './badge-accordion'
 import { accordionDataV1_3_0 } from '../data/changelog-data'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export function V1_3_0() {
   return (
     <div>
@@ -22,7 +24,7 @@ export function V1_3_0() {
               <li>Automatically resolve dependency conflicts</li>
             </ul>
           </div>
-          <img src='/images/changelog/image-1.webp' alt='Component Sync Demo' />
+          <img src={`${basePath}/images/changelog/image-1.webp`} alt='Component Sync Demo' />
           <BadgeAccordion data={accordionDataV1_3_0} />
         </div>
       </TimelineItem>

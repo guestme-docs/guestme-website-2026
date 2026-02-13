@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { DotPattern } from '@/components/dot-pattern'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-background to-background/80 pt-16 sm:pt-20 pb-16">
@@ -68,7 +70,7 @@ export function HeroSection() {
             <div className="relative rounded-xl border bg-card shadow-2xl">
               {/* Light mode dashboard image */}
               <Image
-                src="/dashboard-light.png"
+                src={`${basePath}/dashboard-light.png`}
                 alt="Dashboard Preview - Light Mode"
                 width={1200}
                 height={800}
@@ -78,7 +80,7 @@ export function HeroSection() {
 
               {/* Dark mode dashboard image */}
               <Image
-                src="/dashboard-dark.png"
+                src={`${basePath}/dashboard-dark.png`}
                 alt="Dashboard Preview - Dark Mode"
                 width={1200}
                 height={800}
