@@ -1,58 +1,19 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: isProd ? "/guestme-website-2026" : "",
+  assetPrefix: isProd ? "/guestme-website-2026/" : "",
   experimental: {
     optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
   },
   turbopack: {},
 
-  // Image optimization
+  // Disable server-side image optimization for static export
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ui.shadcn.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-    formats: ['image/webp', 'image/avif'],
-  },
-
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-
-  // Redirects for better SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/dashboard',
-        permanent: true,
-      },
-    ];
+    unoptimized: true,
   },
 };
 

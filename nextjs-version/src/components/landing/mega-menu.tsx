@@ -106,7 +106,7 @@ const menuSections = [
 
 export function MegaMenu() {
   return (
-    <div className="w-[700px] max-w-[95vw] p-4 sm:p-6 lg:p-8 bg-background">
+    <div className="w-[700px] max-w-[95vw] p-4 sm:p-6 lg:p-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
         {menuSections.map((section) => (
           <div key={section.title} className="space-y-4 lg:space-y-6">
@@ -121,7 +121,7 @@ export function MegaMenu() {
                 <a
                   key={item.title}
                   href={item.href}
-                  className="group block space-y-1 lg:space-y-2 hover:bg-accent rounded-md p-2 lg:p-3 -mx-2 lg:-mx-3 transition-colors my-0"
+                  className="group block space-y-1 lg:space-y-2 hover:bg-accent dark:hover:bg-popover rounded-md p-2 lg:p-3 -mx-2 lg:-mx-3 transition-colors my-0"
                 >
                   <div className="flex items-center gap-2 lg:gap-3">
                     <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />

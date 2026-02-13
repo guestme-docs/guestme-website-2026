@@ -1,8 +1,13 @@
-import { Inter } from 'next/font/google'
+import { Inter, Manrope } from 'next/font/google'
 
-// Configure Inter font to match exactly what Next.js optimizes for
 export const inter = Inter({
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   display: 'swap',
   variable: '--font-inter',
+})
+
+export const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-manrope',
 })
