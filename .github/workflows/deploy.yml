@@ -31,14 +31,12 @@ jobs:
         with:
           node-version: "20"
           cache: pnpm
-          cache-dependency-path: nextjs-version/pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
-        working-directory: ./nextjs-version
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        working-directory: ./nextjs-version
         run: pnpm build
 
       - name: Setup Pages
@@ -47,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./nextjs-version/out
+          path: ./out
 
   deploy:
     environment:
